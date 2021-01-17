@@ -10,7 +10,8 @@ import {
   Button,
   ScrollView,
 } from 'react-native';
-
+//import Icon from '@mdi/font';
+import { mdiMenu } from '@mdi/js';
 import WordBlock from './components/WordBlock';
 
 var { height } = Dimensions.get('window');
@@ -27,7 +28,7 @@ export default class VerticalStackLayout extends Component {
     return (
       <ScrollView>
         <View style={styles.container}>
-          <View style={[styles.box, styles.box1]}>
+        <View style={[styles.box, styles.box1]}>
             <Image
               source={(uri = 'https://img.icons8.com/cotton/2x/menu.png')}
               style={styles.logo}
@@ -45,7 +46,7 @@ export default class VerticalStackLayout extends Component {
             <WordBlock word="Friendship" definition="hehehaha we know each other welllll"/>
             <WordBlock word="Forbid" definition="never never not allowed angeryyyy"/>
             <WordBlock word="Fundraise" definition="money money gib money please i promise its for a good cause maybe not but moonnnennyyyyy"/>
-          </View>
+        </View>
         </View>
       </ScrollView>
     );
