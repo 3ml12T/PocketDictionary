@@ -19,10 +19,7 @@ const WordBlock = (props) => {
               <TouchableOpacity onPress={this.edit}>
                 <View style={styles.button}>
                   <Image
-                    source={
-                      (uri =
-                        'https://image.flaticon.com/icons/png/512/84/84380.png')
-                    }
+                    source={require('../assets/pencil.png')}
                     style={styles.like}
                   />
                 </View>
@@ -43,25 +40,19 @@ const styles = StyleSheet.create({
     width: 15,
     height: 15,
     borderRadius: 15 / 2,
-    marginLeft: 300,
+    borderColor: 'black',
+    marginLeft: 280,
+    marginRight: 40,
     marginTop: -20,
   },
   definitions: {
     fontSize: 10,
-    marginRight: 45,
+    marginRight: 50,
     marginTop: -30,
     marginBottom: 0,
   },
   words: {
-    marginLeft: 10,
+    marginLeft: 20,
     marginTop: 5,
-  },
-  letter: {
-    paddingLeft: 10,
-    paddingTop: 10,
-    paddingBottom: 4,
-    fontSize: 15,
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
   },
 });

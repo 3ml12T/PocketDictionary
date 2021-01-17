@@ -11,7 +11,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import WordBlock from './components/Word';
+import WordBlock from './components/WordBlock';
 
 var { height } = Dimensions.get('window');
 
@@ -37,22 +37,33 @@ export default class VerticalStackLayout extends Component {
             <Text style={styles.TitleText} numberOfLines={1}>
               Vocab for Writing
             </Text>
+            <TouchableOpacity>
+              <Image
+                source={require('./assets/whitepencil.png')}
+                style={styles.editLogo}
+              />
+            </TouchableOpacity>
           </View>
           <View style={[styles.box, styles.box2]}>
             <Text style={styles.letter}>D</Text>
-            <WordBlock word="Dashing" definition="ahhh"/>
-            <WordBlock word="Delivery" definition="I am delivering food oh such good food yummy yummy yummy"/>
+            <WordBlock word="Dashing" definition="Moving quickly, in a sprightly manner"/>
+            <WordBlock word="Delivery" definition="To transport from one location to another for the purpose of changing permissions, usually to that of the receiver"/>
             
             <Text style={styles.letter}>F</Text>
-            <WordBlock word="Fashion" definition="ahhh"/>
-            <WordBlock word="Friendship" definition="hehehaha we know each other welllll"/>
-            <WordBlock word="Forbid" definition="never never not allowed angeryyyy"/>
-            <WordBlock word="Fundraise" definition="money money gib money please i promise its for a good cause maybe not but moonnnennyyyyy"/>
-            <WordBlock word="Fundraise" definition="money money gib money please i promise its for a good cause maybe not but moonnnennyyyyy"/>
-            <WordBlock word="Fashion" definition="ahhh"/>
-            <WordBlock word="Friendship" definition="hehehaha we know each other welllll"/>
-            <WordBlock word="Forbid" definition="never never not allowed angeryyyy"/>
-            <WordBlock word="Fundraise" definition="money money gib money please i promise its for a good cause maybe not but moonnnennyyyyy"/>
+            <WordBlock word="Family" definition="Members of the same household, usually related by blood or some form of kinship"/>
+            <WordBlock word="Fashion" definition="The concept of dress or appearance "/>
+            <WordBlock word="Friend" definition="Someone with which the subject has a close acquaintanceship with"/>
+            <WordBlock word="Forbid" definition="To be disallowed"/>
+            <WordBlock word="Fundraise" definition="The practice of raising funds, or money, generally for a charitable purpose"/>
+
+            <Text style={styles.letter}>M</Text>
+            <WordBlock word="Mass" definition="Weight"/>
+            <WordBlock word="Mill" definition="A location where wheat is ground into flour"/>
+            <WordBlock word="Miss" definition="To feel the absence of"/>
+            <WordBlock word="Morbid" definition="To be of solemn nature, associated with death"/>
+            <WordBlock word="Mourn" definition="To lament, usually the passing of another"/>
+            <WordBlock word="Murder" definition="To end the life of another"/>
+            
             
           </View>
         </View>
@@ -62,7 +73,16 @@ export default class VerticalStackLayout extends Component {
 }
 
 const styles = StyleSheet.create({
-    like: {
+  editLogo: {
+    width: 20,
+    height: 20,
+    borderRadius: 20 / 2,
+    alightItems: 'left',
+    marginTop: -33,
+    marginLeft: 280,
+    marginBottom: -100,
+  },
+  like: {
     width: 15,
     height: 15,
     borderRadius: 15 / 2,
@@ -76,25 +96,24 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   words: {
-    marginLeft: 10,
+    marginLeft: 20,
     marginTop: 5,
   },
   letter: {
-    paddingLeft: 10,
+    paddingLeft: 20,
     paddingTop: 10,
     paddingBottom: 4,
     fontSize: 15,
-    borderBottomColor: 'black',
+    borderBottomColor: '#DEE5F4',
     borderBottomWidth: 1,
   },
   logo: {
-    width: 35,
-    height: 35,
-    borderRadius: 35 / 2,
-    justifyContent: 'top',
+    width: 25,
+    height: 25,
+    borderRadius: 25 / 2,
     alightItems: 'right',
     marginTop: 10,
-    marginLeft: 10,
+    marginLeft: 15,
     marginBottom: 10,
   },
   TitleText: {
@@ -120,10 +139,6 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 3,
-    backgroundColor: '#FAFAFA',
-  },
-  box3: {
-    flex: 8,
     backgroundColor: '#FAFAFA',
   },
 });
